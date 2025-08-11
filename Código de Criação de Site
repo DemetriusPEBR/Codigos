@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1><b>Bolsa Futuro Digital </b></h1>
+      <h2>Esse é um curso sobre front end para iniciantes</h2>
+      <h3>Nele você vai aprender HTML, CSS e JavaScript</h3>
+      <h4>O curso tem duração de 6 meses e acontece na Softex Recife, no final os treinandos participarão de uma residência na área de tecnologia da informação</h4>
+      <img src="https://extensao.ifg.edu.br/futurodigital/wp-content/uploads/sites/33/2025/05/Logo_Bolsa_Futuro_Digital-1024x1024.png" width="500" height="500">
+  </body>
+</html>
+
+OneCompiler
