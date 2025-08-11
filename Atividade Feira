@@ -1,0 +1,32 @@
+algoritmo "Caixa de Mercado"
+
+var
+   Melancia : real
+   Laranja : real
+   Uva : real
+   Leite : real
+   Café : real
+   Desejo : real
+   soma : real
+
+inicio
+Melancia <- 4,00
+Laranja <- 3,00
+Uva <- 7,00
+Leite <- 7,00
+Café <- 15,00
+
+   escreval("Olá, temos: " )
+   escreval("1 Melancia R$", Melancia)
+   escreval("2 Laranja R$", Laranja)
+   escreval("3 Uva R$", Uva)
+   escreval("4 Leite R$", Leite)
+   escreval("5 Café R$", Café)
+   escreval("Digite o número da opção desejada: ")
+   leia(Desejo)
+   escreval("O cliente deseja: " Desejo, "!")
+   escreval("O valor total é: ", soma)
+
+   
+
+fimalgoritmo
