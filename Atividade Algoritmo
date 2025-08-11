@@ -1,0 +1,23 @@
+algoritmo "Atividade sobre Variaveis"
+
+var
+   
+ x: inteiro
+ y: inteiro
+ z: inteiro
+
+inicio
+   
+   escreval("Digite o primeiro número: ")
+   leia(x)
+   escreval("Digite o segundo número: ")
+   leia(y)
+
+   z <- x
+   x <- y
+   y <- z
+   
+   escreval("novo valor  de x, " x, "!")
+   escreval("novo valor de y, " y, "!")
+
+fimalgoritmo
