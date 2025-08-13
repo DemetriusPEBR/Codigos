@@ -1,0 +1,21 @@
+algoritmo "Peso do peixe"
+
+var
+   pesopeixe: real
+   multa: real
+   pesoexc: real
+
+inicio
+
+   escreval("Digite o peso do peixe: ")
+   leia(pesopeixe)
+   multa <- 4*(pesopeixe - 50)
+   pesoexc <- pesopeixe - 50
+   se pesopeixe > 50 entao
+   escreval("O peso do peixe excede o peso limite em: ", pesoexc, "KG, o valor da multa é: ", multa, "R$")
+   senao
+   escreval("O peso do peixe está dentro do limite")
+   fimse
+   
+
+fimalgoritmo
