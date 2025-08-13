@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Contrato Novo</h1>
+      <p>1. Fechar contrato</p>
+      <p>2. Análise de sistema</p>
+      <p>1. Avaliação da Empresa</p>
+      <p>1. Entrevista com Funcionários</p>
+      <p>2. Pesquisa de documentação da empresa</p>
+      <p>2. Programação</p>
+      <p>3. Aprovação do projeto</p>
+      <p>3. Treinamento dos usuários</p>
+      <p>1. Titanic</p>
+      <p>2. Meu primeiro amor</p>
+      <p>3. Uma linda mulher</p>
+      <p>10. Exterminador do futuro II</p>
+      <p>11. De volta para o futuro I, II III</p>
+      <p>12. Indiana Jones</p>
+      <p>20. Sexta-feira 13</p>
+      <p>21. A hora do pesadelo</p>
+      
+  </body>
+</html>
