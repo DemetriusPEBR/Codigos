@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Troca de Variaveis </h1>
+      <p id="currentTime">Valores iniciais:<br> x = <span id="xValue"></span><br> y = <span id="yValue"></span></p>
+      <script type="text/javascript">
+        let num1=prompt("Entre com um valor inteiro p/ variável x: ");
+        let num2=prompt("Entre com um valor inteiro p/ variável y: ");
+        
+        document.getElementById("xValue").textContent = num1;
+        document.getElementById("yValue").textContent = num2;
+        
+        function swapValues() {
+          let temp = num1;
+          num1 = num2;
+          num2 = temp;
+
+          // Atualizar a tela com os novos valores
+          document.getElementById("xValue").textContent = num1;
+          document.getElementById("yValue").textContent = num2;
+        }
+      </script>
+      <button onclick="swapValues()">Trocar os Valores</button>
+        
+</html>
