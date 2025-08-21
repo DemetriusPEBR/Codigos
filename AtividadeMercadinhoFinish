@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        td, th {
+            padding: 8px;
+            text-align: left;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro dos Produtos</h1>
+    <form id="productForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inputs para cadastro dos produtos -->
+                <tr>
+                    <td><input type="text" id="produto1" placeholder="Produto 1"></td>
+                    <td><input type="number" id="valor1" placeholder="Valor do Produto 1" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="produto2" placeholder="Produto 2"></td>
+                    <td><input type="number" id="valor2" placeholder="Valor do Produto 2" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="produto3" placeholder="Produto 3"></td>
+                    <td><input type="number" id="valor3" placeholder="Valor do Produto 3" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="produto4" placeholder="Produto 4"></td>
+                    <td><input type="number" id="valor4" placeholder="Valor do Produto 4" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="produto5" placeholder="Produto 5"></td>
+                    <td><input type="number" id="valor5" placeholder="Valor do Produto 5" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="produto6" placeholder="Produto 6"></td>
+                    <td><input type="number" id="valor6" placeholder="Valor do Produto 6" step="0.01"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" onclick="registerProducts()">Cadastrar Produtos</button>
+    </form>
+
+    <div id="menu" style="display:none;">
+        <h2>Menu de Compras</h2>
+        <div id="productList"></div>
+        <button onclick="finishPurchase()">Finalizar Compra</button>
+    </div>
+
+    <div id="result" style="display:none;">
+        <h2>Resumo da Compra</h2>
+        <div id="purchaseSummary"></div>
+        <div class="result" id="totalPrice"></div>
+    </div>
+
+    <script>
+        let produtos = [];
+        let valores = [];
+        let quantidades = [];
+        let total = 0;
+
+        // Função para cadastrar os produtos
+        function registerProducts() {
+            for (let i = 1; i <= 6; i++) {
+                let produto = document.getElementById('produto' + i).value;
+                let valor = parseFloat(document.getElementById('valor' + i).value);
+                
+                if (produto && !isNaN(valor)) {
+                    produtos.push(produto);
+                    valores.push(valor);
+                    quantidades.push(0); // Inicializa a quantidade como 0
+                }
+            }
+            document.getElementById('productForm').style.display = 'none'; // Oculta o formulário de cadastro
+            displayMenu();
+        }
+
+        // Função para exibir o menu de compras
+        function displayMenu() {
+            let menu = document.getElementById('productList');
+            menu.innerHTML = '<h3>Escolha os produtos para comprar</h3>';
+            for (let i = 0; i < produtos.length; i++) {
+                menu.innerHTML += `
+                    <p>${i + 1} - ${produtos[i]} R$: ${valores[i].toFixed(2)} 
+                    <input type="number" id="quantidade${i}" placeholder="Quantidade" min="0"></p>
+                `;
+            }
+            document.getElementById('menu').style.display = 'block';
+        }
+
+        // Função para finalizar a compra e mostrar o resumo
+        function finishPurchase() {
+            total = 0;
+            let summary = document.getElementById('purchaseSummary');
+            summary.innerHTML = '';
+            
+            for (let i = 0; i < produtos.length; i++) {
+                let quantidade = parseInt(document.getElementById('quantidade' + i).value) || 0;
+                quantidades[i] = quantidade;
+                if (quantidade > 0) {
+                    let subtotal = valores[i] * quantidade;
+                    total += subtotal;
+                    summary.innerHTML += `<p>${i + 1} - ${produtos[i]} R$: ${valores[i].toFixed(2)} - Quantidade: ${quantidade} - Subtotal: R$ ${subtotal.toFixed(2)}</p>`;
+                }
+            }
+
+            document.getElementById('totalPrice').innerHTML = `Total a pagar: R$ ${total.toFixed(2)}`;
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+    
+</body>
+</html>
