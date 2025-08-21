@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1>Cadastro dos Produtos </h1>
+
+      <form id="productForm">
+        <table>
+          <tr>
+          <tbody>
+            <td><input type="text" name="produto1" placeholder="Produto 1"></td>
+            <td><input type="number" id="valor1" placeholder="Valor do Produto 1" step="0.01"></td>
+                </tr>
+                <tr>
+            <td><input type="text" name="produto2" placeholder="Produto 2"></td>
+            <td><input type="number" id="valor2" placeholder="Valor do Produto 2" step="0.01"></td>
+                </tr>
+                <tr>
+            <td><input type="text" name="produto3" placeholder="Produto 3"></td>
+            <td><input type="number" id="valor3" placeholder="Valor do Produto 3" step="0.01"></td>
+                </tr>
+                <tr>
+            <td><input type="text" name="produto4" placeholder="Produto 4"></td>
+            <td><input type="number" id="valor4" placeholder="Valor do Produto 4" step="0.01"></td>
+                </tr>
+                <tr>
+            <td><input type="text" name="produto5" placeholder="Produto 5"></td>
+            <td><input type="number" id="valor5" placeholder="Valor do Produto 5" step="0.01"></td>
+                </tr>
+                <tr>
+            <td><input type="text" name="produto6" placeholder="Produto 6"></td>
+            <td><input type="number" id="valor6" placeholder="Valor do Produto 6" step="0.01"></td>
+                </tr>
+                </tbody>
+        </table>
+        <button type="button" onclick="registerProducts()">Cadastrar Produtos</button>
+        </form>
+        </body>
+</html>
