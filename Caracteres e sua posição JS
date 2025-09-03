@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Caracteres e Posições</title>
+  <style>
+    body {
+      font-family: Arial, Sans-Serif;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Digite uma palavra:</h2>
+  <input type="text" id="palavraInput" placeholder="Digite aqui" />
+  <button onclick="mostrarCaracteres()">Mostrar caracteres</button>
+
+  <h3>Resultado:</h3>
+  <div id="resultado"></div>
+  
+
+  <script>
+    // criar uma função com base na palavra enviada ao clicar no botão 'Mostrar Caracteres'
+    function mostrarCaracteres() {
+      const palavra = document.getElementById("palavraInput").value; // separa cada palavra para receber um valor
+      const resultadoDiv = document.getElementById("resultado"); // 
+      resultadoDiv.innerHTML = ""; // limpa o resultado anterior
+
+      // Percorre cada caractere da palavra e exibe com a posição
+      for (let i = 0; i < palavra.length; i++) {
+        const linha = `Posição ${i}: '${palavra[i]}'`; // criação da string com posição e palavra
+        const p = document.createElement("p"); // separa os elementos da palavra, letra por letra
+        p.textContent = linha; // permite exibir a letra na linha que ele foi destinado
+        resultadoDiv.appendChild(p);
+      }
+    }
+  </script>
+
+</body>
+</html>
