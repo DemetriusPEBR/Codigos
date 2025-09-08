@@ -2,26 +2,26 @@
 <head>
     <title>IMC JavaScript</title>
         <script>    
-            function calcularIMC() {
-                var altura = parseFloat(document.getElementById("altura").value);
-                var peso = parseFloat(document.getElementById("peso").value);
-                altura /= 100;
+            function calcularIMC() { //função criada para calcular o IMC
+                var altura = parseFloat(document.getElementById("altura").value); //parseFloat = converter string para número decimal
+                var peso = parseFloat(document.getElementById("peso").value); //value = pegar o valor do campo
+                altura /= 100; //altura = altura / 100
             
-                var imc = (peso / (altura + altura)).toFixed(2)
-                document.getElementById("resultadoIMC").innerHTML = "IMC: <strong>" + imc + "</strong>";
+                var imc = (peso / (altura + altura)).toFixed(2) //toFixed(2) = limitar o número de casas decimais
+                document.getElementById("resultadoIMC").innerHTML = "IMC: <strong>" + imc + "</strong>"; //innerHTML = inserir conteúdo HTML dentro de uma tag
         }
         </script>
     </head>
     <body>
         <h1>Calculando seu IMC</h1>
-        <laber for="altura">Altura (cm): </laber>
-        <input id="altura" type="number" min="100" max="250"><br>
-        <laber for="peso">Peso (kg): </laber>
-        <input id="peso" type="number" min="0" max="250"><br>
-        <button onclick="calcularIMC()">Calcular IMC</button>
-        <div id="resultadoIMC"></div>
-        <div id="extra">
-            <pre>
+        <label for="altura">Altura (cm): </label><br>
+        <input id="altura" type="number" min="100" max="250"><br><br>
+        <label for="peso">Peso (kg): </label><br>
+        <input id="peso" type="number" min="0" max="250"><br><br>
+        <button onclick="calcularIMC()">Calcular IMC</button><br> <!--onclick = ao clicar no botão a função é feita-->
+        <div id="resultadoIMC"></div> <!--div onde o resultado do IMC será mostrado-->
+        <div id="extra"> <!--div onde a tabela de classificação do IMC será mostrada-->
+            <pre> <!--pre = desenha algo na página-->
                 *************************************************************
                 |       IMC            | Situação                           |
                 *************************************************************
