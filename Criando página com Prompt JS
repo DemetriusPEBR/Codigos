@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Alo personalizado</title>
+        <script type="text/javascript">
+            nome = prompt("Qual o seu nome?");
+            </script>
+    </head>
+    <body>
+        <h1>Minha Página</h1>
+        <script type="text/javascript">
+            document.write("<h3>"+nome+", seja bem vindo a minha página!</h3>");
+        </script>
+    </body>
+</html>
