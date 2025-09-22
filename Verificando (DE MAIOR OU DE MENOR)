@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Questão 02</title>
+</head>
+<body>
+    <h2>Verificando Idade</h2>
+    <script>
+      const idade=prompt("Digite aqui a sua Idade: ");
+
+      
+      if (idade >= 20) {
+        alert("Maior de idade");;
+      } else {
+        alert("Menor de idade");
+      }
+    </script>
+</body>
+</html>
