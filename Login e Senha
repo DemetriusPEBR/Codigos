@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Questão 04</title>
+  <link rel="stylesheet" type="text/css" href="questao04.css">
+</head>
+        <body>
+            <div class="login-container">
+                <h2>Login</h2>
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario">
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha">
+
+                <button onclick="validarLogin()">Entrar</button>
+
+                <div class="message" id="mensagem"></div>
+</div>
+            <script>
+                function validarLogin(){
+                    const usuario = document.getElementById("usuario").value;
+                    const senha = document.getElementById("senha").value;
+                    const mensagem = document.getElementById("mensagem").value
+
+                    if (usuario === "admin" && senha === "1234"){
+                        mensagem.textContant = "Login realizado com sucesso";
+                        mensagem.style.color = "green";
+                    } else {
+                        mensagem.textContant = "Usuário ou Senha incorretos";
+                        mensagem.style.color = "red";
+                    }
+                }
+            </script>
+        </body>
+        </html>
