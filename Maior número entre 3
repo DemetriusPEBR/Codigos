@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Questão 05</title>
+</head>
+<body>
+    
+  <label for="num1">Número 1:</label>
+  <input type="number" id="num1"><br><br>
+
+  <label for="num2">Número 2:</label>
+  <input type="number" id="num2"><br><br>
+
+  <label for="num3">Número 3:</label>
+  <input type="number" id="num3"><br><br>
+
+  <button onclick="encontrarMaior()">Verificar Maior</button>
+
+  <p id="resultado"></p>
+    <script>
+        function encontrarMaior() {
+            const n1 = parseFloat(document.getElementById('num1').value);
+            const n2 = parseFloat(document.getElementById('num2').value);
+            const n3 = parseFloat(document.getElementById('num3').value);
+
+            const maior = Math.max(n1, n2, n3); //aqui é onde se realiza a verificação de qual é a maior nota entre as 3
+
+      document.getElementById('resultado').innerText = `Maior: ${maior}`; //pega a const da verificação anterior e bota aqui no ${maior}
+    }
+    </script>
+</body>
+</html>
