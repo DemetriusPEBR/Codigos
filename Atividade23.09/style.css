@@ -1,0 +1,7 @@
+.card{background-color: blue;/*cor de fundo*/
+border-radius: 5px;/*raio da borda*/
+width: 1200px;/*largura*/
+height: auto;/*altura*/
+margin: auto;/*distancia da borda externa*/
+padding: 20px;/*distancia da borda interna*/
+}
